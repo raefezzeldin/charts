@@ -17,7 +17,7 @@ initFile: |-
     superset run
   elif [ "$1" == "production-mode" ]; then
     superset db upgrade
-    superset init
+    /usr/local/bin/superset-init --username admin --firstname admin --lastname user --email admin@fab.org --password admin
     pip install boto3
     pip install psycopg2-binary
     pip install mysqlclient
